@@ -3,7 +3,7 @@
 class Plugin {
   constructor(){}
   //リアクション系
-  reactionCondiction() {return /.*/}
+  reactionCondiction() {return /(test|ping)/i}
   action(message){
     message.res("huga")
   }
@@ -18,3 +18,5 @@ class Plugin {
     tools.send("test cron");
   }]}
 }
+
+module.exports = new Plugin();
